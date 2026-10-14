@@ -1,0 +1,457 @@
+
+/* ================================
+   CONTACT SECTION
+================================ */
+
+.contact-section {
+  position: relative;
+  overflow: hidden;
+  background: var(--color-bg);
+}
+
+.contact-panel {
+  position: relative;
+  padding: clamp(64px, 9vw, 120px) 32px;
+  text-align: center;
+  border: 1px solid var(--color-border);
+  background:
+    radial-gradient(
+      ellipse at 50% 0%,
+      rgba(198, 165, 106, 0.12),
+      transparent 65%
+    );
+}
+
+.contact-label {
+  font-size: 12px;
+  letter-spacing: 3px;
+  line-height: 1.8;
+}
+
+.contact-title {
+  margin: 30px 0;
+  color: var(--color-ivory);
+  font-family: "Playfair Display", serif;
+  font-size: clamp(52px, 7.5vw, 92px);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -2px;
+}
+
+.contact-title em {
+  color: var(--color-gold);
+  font-weight: 400;
+}
+
+.contact-description {
+  max-width: 590px;
+  margin: 0 auto 38px;
+  color: var(--color-muted);
+  font-size: 17px;
+  line-height: 1.95;
+}
+
+/* ================================
+   WHATSAPP BUTTON
+================================ */
+
+.contact-whatsapp-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  min-height: 68px;
+  padding: 0 34px;
+  color: #111;
+  background: var(--color-gold);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  border: 1px solid var(--color-gold);
+  transition:
+    background 250ms ease,
+    color 250ms ease,
+    transform 250ms ease,
+    box-shadow 250ms ease;
+}
+
+.contact-whatsapp-button:hover {
+  color: var(--color-bg);
+  background: var(--color-ivory);
+  border-color: var(--color-ivory);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+
+.contact-whatsapp-button img {
+  display: block;
+  width: 29px;
+  height: 29px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+/* ================================
+   STUDIO ADDRESS
+================================ */
+
+.contact-address {
+  max-width: 520px;
+  margin: 48px auto 0;
+  padding-top: 34px;
+  border-top: 1px solid var(--color-border);
+}
+
+.contact-address-label {
+  color: var(--color-gold);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2.8px;
+}
+
+.contact-address p {
+  margin: 18px 0 22px;
+  color: var(--color-muted);
+  font-size: 16px;
+  line-height: 2;
+}
+
+.contact-directions-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  color: var(--color-ivory);
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-color: var(--color-gold);
+  text-underline-offset: 6px;
+  transition: color 200ms ease;
+}
+
+.contact-directions-link:hover {
+  color: var(--color-gold);
+}
+
+.contact-note {
+  margin: 36px 0 0;
+  color: var(--color-muted);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1.8px;
+  line-height: 2;
+}
+
+.contact-note span {
+  color: var(--color-gold);
+  padding: 0 5px;
+}
+
+/* ================================
+   FOOTER MAIN
+================================ */
+
+.site-footer {
+  padding: 62px 0 28px;
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+}
+
+.footer-main {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  padding-bottom: 48px;
+}
+
+.footer-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  flex-shrink: 0;
+  color: var(--color-ivory);
+  text-decoration: none;
+}
+
+.footer-monogram {
+  display: grid;
+  width: 55px;
+  height: 55px;
+  flex-shrink: 0;
+  place-items: center;
+  color: var(--color-gold);
+  border: 1px solid var(--color-border);
+  font-family: "Playfair Display", serif;
+  font-size: 31px;
+}
+
+.footer-brand-text strong,
+.footer-brand-text small {
+  display: block;
+}
+
+.footer-brand-text strong {
+  font-size: 15px;
+  letter-spacing: 2.4px;
+}
+
+.footer-brand-text small {
+  margin-top: 7px;
+  color: var(--color-muted);
+  font-size: 11px;
+  letter-spacing: 3px;
+}
+
+.footer-tagline {
+  margin: 0;
+  color: var(--color-muted);
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  line-height: 1.8;
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.footer-nav a,
+.footer-top-link {
+  color: var(--color-muted);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 200ms ease;
+}
+
+.footer-nav a:hover,
+.footer-top-link:hover {
+  color: var(--color-gold);
+}
+
+/* ================================
+   FOOTER BOTTOM
+================================ */
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding-top: 26px;
+  border-top: 1px solid var(--color-border);
+}
+
+.footer-copyright {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.footer-credit {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  line-height: 1.9;
+}
+
+.footer-credit span {
+  color: var(--color-gold);
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: color 200ms ease;
+}
+
+.footer-credit span:hover {
+  color: var(--color-ivory);
+}
+
+.footer-top-link {
+  flex-shrink: 0;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+}
+
+.footer-mobile-break {
+  display: none;
+}
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 1000px) {
+  .footer-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  .footer-nav {
+    grid-column: 1 / -1;
+  }
+
+  .footer-bottom {
+    flex-wrap: wrap;
+  }
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+  .contact-panel {
+    padding: 58px 20px;
+  }
+
+  .contact-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .contact-title {
+    margin: 24px 0;
+    font-size: clamp(43px, 11vw, 60px);
+    letter-spacing: -1.3px;
+  }
+
+  .contact-description {
+    margin-bottom: 30px;
+    font-size: 15px;
+    line-height: 1.9;
+  }
+
+  .contact-whatsapp-button {
+    width: 100%;
+    max-width: 360px;
+    min-height: 64px;
+    gap: 12px;
+    padding: 0 15px;
+    font-size: 12px;
+    letter-spacing: 0.8px;
+  }
+
+  .contact-whatsapp-button img {
+    width: 26px;
+    height: 26px;
+  }
+
+  .contact-address {
+    margin-top: 38px;
+    padding-top: 28px;
+  }
+
+  .contact-address-label {
+    font-size: 11px;
+  }
+
+  .contact-address p {
+    font-size: 15px;
+  }
+
+  .contact-directions-link {
+    font-size: 14px;
+  }
+
+  .contact-note {
+    margin-top: 30px;
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+
+  .site-footer {
+    padding-top: 42px;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding-bottom: 32px;
+  }
+
+  .footer-monogram {
+    width: 50px;
+    height: 50px;
+    font-size: 28px;
+  }
+
+  .footer-brand-text strong {
+    font-size: 14px;
+  }
+
+  .footer-tagline {
+    font-size: 19px;
+  }
+
+  .footer-nav {
+    gap: 18px 24px;
+  }
+
+  .footer-nav a {
+    font-size: 14px;
+  }
+
+  .footer-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+    padding-top: 22px;
+  }
+
+  .footer-copyright,
+  .footer-credit {
+    font-size: 12px;
+  }
+
+  .footer-top-link {
+    font-size: 11px;
+  }
+
+  .footer-mobile-break {
+    display: initial;
+  }
+}
+
+/* ================================
+   SMALL MOBILE
+================================ */
+
+@media (max-width: 360px) {
+  .contact-panel {
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+
+  .contact-title {
+    font-size: 40px;
+  }
+
+  .contact-whatsapp-button {
+    gap: 8px;
+    font-size: 10px;
+    letter-spacing: 0.4px;
+  }
+
+  .footer-nav {
+    gap: 16px;
+  }
+}
+
+/* ================================
+   ACCESSIBILITY
+================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-whatsapp-button,
+  .contact-directions-link,
+  .footer-credit span {
+    transition: none;
+  }
+}

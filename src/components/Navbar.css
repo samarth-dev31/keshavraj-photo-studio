@@ -1,0 +1,726 @@
+
+/* =========================================
+   KESHAVRAJ PHOTO STUDIO
+   Signature Editorial Navigation
+========================================= */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background: rgba(9, 9, 8, 0.96);
+  color: #f5f0e8;
+  border-bottom: 1px solid rgba(198, 165, 106, 0.22);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.navbar-shell {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(220px, 1fr) auto minmax(190px, 1fr);
+  align-items: center;
+  gap: 26px;
+  width: 100%;
+  max-width: 1600px;
+  min-height: 96px;
+  margin-inline: auto;
+  padding: 14px 5.5%;
+  box-sizing: border-box;
+}
+
+/* BRAND SIGNATURE */
+
+.navbar-brand {
+  display: inline-flex;
+  align-items: center;
+  justify-self: start;
+  gap: 13px;
+  min-width: 0;
+  color: inherit;
+  text-decoration: none;
+}
+
+.navbar-monogram {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 49px;
+  height: 49px;
+  flex: 0 0 49px;
+  border: 1px solid rgba(198, 165, 106, 0.76);
+  color: #d4b77e;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 32px;
+  line-height: 1;
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.navbar-monogram::before {
+  position: absolute;
+  inset: 4px;
+  border: 1px solid rgba(198, 165, 106, 0.22);
+  content: "";
+  pointer-events: none;
+}
+
+.navbar-brand:hover .navbar-monogram {
+  transform: rotate(-5deg);
+  border-color: #e2c88f;
+  background: rgba(198, 165, 106, 0.08);
+}
+
+.navbar-monogram > span:first-child {
+  transform: translateX(-2px);
+}
+
+.navbar-monogram-dot {
+  align-self: flex-end;
+  margin: 0 0 8px -5px;
+  color: #f5f0e8;
+  font-size: 21px;
+}
+
+.navbar-brand-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.navbar-brand-name {
+  color: #f5f0e8;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: -0.045em;
+  line-height: 1;
+}
+
+.navbar-brand-subtitle {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #c6a56a;
+  font-family: "DM Sans", sans-serif;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.23em;
+  white-space: nowrap;
+}
+
+.navbar-brand-rule {
+  display: block;
+  width: 13px;
+  height: 1px;
+  background: rgba(198, 165, 106, 0.65);
+}
+
+/* EDITORIAL NAVIGATION LINKS */
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(14px, 2vw, 31px);
+}
+
+.navbar-link {
+  position: relative;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 5px;
+  padding: 12px 0;
+  color: #d0cbc2;
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.25s ease;
+}
+
+.navbar-link::after {
+  position: absolute;
+  right: 0;
+  bottom: 5px;
+  left: 0;
+  height: 1px;
+  background: #c6a56a;
+  content: "";
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.28s ease;
+}
+
+.navbar-link:hover {
+  color: #e1c58d;
+}
+
+.navbar-link:hover::after {
+  transform: scaleX(1);
+}
+
+.navbar-link-number {
+  align-self: flex-start;
+  color: #9e875d;
+  font-size: 8px;
+  line-height: 1.4;
+  opacity: 0;
+  transform: translateY(3px);
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+.navbar-link:hover .navbar-link-number {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* WHATSAPP CONTACT CAPSULE */
+
+.navbar-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-self: end;
+  gap: 10px;
+  min-height: 53px;
+  padding: 7px 13px 7px 8px;
+  border: 1px solid rgba(37, 211, 102, 0.42);
+  background: rgba(37, 211, 102, 0.055);
+  color: #f5f0e8;
+  text-decoration: none;
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.navbar-whatsapp:hover {
+  transform: translateY(-2px);
+  border-color: #25d366;
+  background: rgba(37, 211, 102, 0.11);
+}
+
+.navbar-whatsapp-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  flex: 0 0 35px;
+  background: #25d366;
+  border-radius: 50%;
+}
+
+.navbar-whatsapp-logo {
+  display: block;
+  width: 23px;
+  height: 23px;
+  object-fit: contain;
+}
+
+.navbar-whatsapp-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.navbar-whatsapp-label {
+  color: #83dca3;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+}
+
+.navbar-whatsapp-title {
+  color: #f5f0e8;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.navbar-whatsapp-arrow {
+  margin-left: 3px;
+  color: #7cdb9a;
+}
+
+/* MOBILE MENU BUTTON */
+
+.navbar-menu-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border: 1px solid rgba(198, 165, 106, 0.48);
+  border-radius: 0;
+  background: transparent;
+  color: #e4cfaa;
+  cursor: pointer;
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.navbar-menu-toggle:hover,
+.navbar-menu-toggle.is-open {
+  border-color: #c6a56a;
+  background: rgba(198, 165, 106, 0.09);
+}
+
+/* MOBILE EDITORIAL PANEL */
+
+.navbar-mobile-panel {
+  display: none;
+}
+
+/* =========================================
+   MEDIUM DESKTOP
+========================================= */
+
+@media (max-width: 1250px) {
+  .navbar-shell {
+    grid-template-columns: minmax(195px, 1fr) auto minmax(175px, 1fr);
+    gap: 18px;
+    padding-inline: 3.5%;
+  }
+
+  .navbar-brand-name {
+    font-size: 25px;
+  }
+
+  .navbar-monogram {
+    width: 44px;
+    height: 44px;
+    flex-basis: 44px;
+    font-size: 29px;
+  }
+
+  .navbar-links {
+    gap: 17px;
+  }
+
+  .navbar-link {
+    font-size: 11px;
+  }
+
+  .navbar-whatsapp {
+    gap: 8px;
+    padding-right: 10px;
+  }
+
+  .navbar-whatsapp-arrow {
+    display: none;
+  }
+}
+
+/* =========================================
+   TABLET AND MOBILE NAVIGATION
+========================================= */
+
+@media (max-width: 980px) {
+  .navbar-shell {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    min-height: 83px;
+    padding: 12px 5%;
+  }
+
+  .navbar-links {
+    display: none;
+  }
+
+  .navbar-whatsapp {
+    margin-left: auto;
+  }
+
+  .navbar-menu-toggle {
+    display: inline-flex;
+    flex: 0 0 45px;
+  }
+
+  .navbar-mobile-panel {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    display: block;
+    padding: 0 5%;
+    overflow: hidden;
+    border-bottom: 1px solid transparent;
+    background: #0c0c0a;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-8px);
+    transition:
+      opacity 0.25s ease,
+      transform 0.25s ease,
+      visibility 0.25s ease;
+  }
+
+  .navbar-mobile-panel.is-open {
+    padding-top: 27px;
+    padding-bottom: 23px;
+    border-bottom-color: rgba(198, 165, 106, 0.4);
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .navbar-mobile-heading {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 13px;
+    color: #c6a56a;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+  }
+
+  .navbar-mobile-heading-line {
+    display: block;
+    width: 45px;
+    height: 1px;
+    background: rgba(198, 165, 106, 0.45);
+  }
+
+  .navbar-mobile-links {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navbar-mobile-link {
+    display: grid;
+    grid-template-columns: 34px 1fr 24px;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(245, 240, 232, 0.09);
+    color: #f5f0e8;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .navbar-mobile-link:hover {
+    color: #d9bb80;
+  }
+
+  .navbar-mobile-number {
+    color: #b89a64;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 14px;
+  }
+
+  .navbar-mobile-link-label {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 25px;
+    letter-spacing: -0.025em;
+  }
+
+  .navbar-mobile-link > svg {
+    justify-self: end;
+    color: #c6a56a;
+  }
+
+  .navbar-mobile-whatsapp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 57px;
+    margin-top: 23px;
+    padding: 12px 16px;
+    border: 1px solid rgba(37, 211, 102, 0.45);
+    background: rgba(37, 211, 102, 0.07);
+    color: #f5f0e8;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .navbar-mobile-whatsapp-logo {
+    width: 27px;
+    height: 27px;
+    object-fit: contain;
+  }
+
+  .navbar-mobile-whatsapp > svg {
+    margin-left: auto;
+    color: #25d366;
+  }
+
+  .navbar-mobile-footer {
+    margin: 21px 0 0;
+    color: #92897c;
+    font-size: 8px;
+    letter-spacing: 0.15em;
+    line-height: 1.8;
+    text-align: center;
+  }
+}
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 520px) {
+  .navbar-shell {
+    min-height: 76px;
+    padding: 10px 18px;
+    gap: 10px;
+  }
+
+  .navbar-brand {
+    gap: 9px;
+  }
+
+  .navbar-monogram {
+    width: 39px;
+    height: 39px;
+    flex-basis: 39px;
+    font-size: 26px;
+  }
+
+  .navbar-monogram::before {
+    inset: 3px;
+  }
+
+  .navbar-monogram-dot {
+    margin-bottom: 6px;
+    font-size: 17px;
+  }
+
+  .navbar-brand-copy {
+    gap: 4px;
+  }
+
+  .navbar-brand-name {
+    font-size: 22px;
+  }
+
+  .navbar-brand-subtitle {
+    gap: 5px;
+    font-size: 7px;
+    letter-spacing: 0.16em;
+  }
+
+  .navbar-brand-rule {
+    width: 9px;
+  }
+
+  .navbar-whatsapp {
+    min-height: 42px;
+    gap: 0;
+    padding: 5px;
+  }
+
+  .navbar-whatsapp-icon {
+    width: 31px;
+    height: 31px;
+    flex-basis: 31px;
+  }
+
+  .navbar-whatsapp-logo {
+    width: 21px;
+    height: 21px;
+  }
+
+  .navbar-whatsapp-copy,
+  .navbar-whatsapp-arrow {
+    display: none;
+  }
+
+  .navbar-menu-toggle {
+    width: 42px;
+    height: 42px;
+    flex-basis: 42px;
+  }
+
+  .navbar-mobile-panel {
+    padding-right: 22px;
+    padding-left: 22px;
+  }
+
+  .navbar-mobile-panel.is-open {
+    padding-top: 23px;
+    padding-bottom: 20px;
+  }
+
+  .navbar-mobile-link-label {
+    font-size: 23px;
+  }
+}
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+  .navbar-monogram,
+  .navbar-link,
+  .navbar-link::after,
+  .navbar-link-number,
+  .navbar-whatsapp,
+  .navbar-menu-toggle,
+  .navbar-mobile-panel,
+  .navbar-mobile-link {
+    transition: none;
+  }
+}
+
+/* =====================================
+   PREMIUM NAVBAR — BIGGER TYPOGRAPHY
+   ===================================== */
+
+/* Main navbar height and spacing */
+.navbar-shell {
+  min-height: 100px;
+  column-gap: 30px;
+}
+
+/* Brand name */
+.navbar-brand-name {
+  font-size: 30px;
+  line-height: 1.1;
+  letter-spacing: 0.3px;
+  font-weight: 600;
+}
+
+/* PHOTO STUDIO subtitle */
+.navbar-brand-subtitle {
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: 600;
+}
+
+/* Gold K monogram */
+.navbar-monogram {
+  font-size: 37px;
+}
+
+/* Desktop navigation links */
+.navbar-link {
+  font-size: 16px;
+  font-weight: 500;
+  gap: 7px;
+}
+
+/* Small numbered details beside links */
+.navbar-link-number {
+  font-size: 11px;
+  font-weight: 500;
+}
+
+/* WhatsApp contact button */
+.navbar-whatsapp {
+  min-height: 64px;
+  padding: 12px 17px;
+  gap: 12px;
+}
+
+.navbar-whatsapp-label {
+  font-size: 11px;
+  letter-spacing: 1.8px;
+  font-weight: 600;
+}
+
+.navbar-whatsapp-title {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.navbar-whatsapp-logo {
+  width: 28px;
+  height: 28px;
+}
+
+/* Mobile menu heading */
+.navbar-mobile-heading {
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+/* Mobile navigation links */
+.navbar-mobile-link-label {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+/* Mobile link numbers */
+.navbar-mobile-number {
+  font-size: 13px;
+}
+
+/* Mobile WhatsApp button */
+.navbar-mobile-whatsapp {
+  font-size: 18px;
+  font-weight: 600;
+  min-height: 60px;
+}
+
+/* Mobile WhatsApp logo */
+.navbar-mobile-whatsapp-logo {
+  width: 27px;
+  height: 27px;
+}
+
+/* Mobile footer text */
+.navbar-mobile-footer {
+  font-size: 11px;
+  letter-spacing: 1.5px;
+}
+
+/* Tablet and smaller laptops */
+@media (max-width: 1100px) {
+  .navbar-shell {
+    column-gap: 18px;
+  }
+
+  .navbar-brand-name {
+    font-size: 26px;
+  }
+
+  .navbar-link {
+    font-size: 14px;
+  }
+
+  .navbar-whatsapp-title {
+    font-size: 15px;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 760px) {
+  .navbar-shell {
+    min-height: 82px;
+  }
+
+  .navbar-brand-name {
+    font-size: 27px;
+  }
+
+  .navbar-brand-subtitle {
+    font-size: 10px;
+    letter-spacing: 2.5px;
+  }
+
+  .navbar-monogram {
+    font-size: 33px;
+  }
+
+  .navbar-mobile-link-label {
+    font-size: 27px;
+  }
+
+  .navbar-mobile-whatsapp {
+    font-size: 17px;
+  }
+}
